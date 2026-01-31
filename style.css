@@ -1,0 +1,654 @@
+@font-face {
+    font-family: gotham-regular;
+    src: url(font/Gotham\ Regular.otf);
+}
+@font-face {
+    font-family:gotham-bold ;
+    src: url(font/Gotham\ Bold.otf);
+}
+@font-face {
+    font-family: gotham-thin;
+    src: url(font/Gotham\ Thin.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gotham-thin';
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    padding: 0 2vw;
+    
+}
+
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #38ffb1;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+
+}
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+
+}
+
+#nav-part2 h4 a{
+    text-decoration: none;
+    color: #ffffff;
+    z-index: 9;
+    position: relative;
+    font-family: gotham-bold;
+    
+}
+
+#nav-part2 h4:hover a{
+    color: #000000;
+    cursor: pointer;
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffffac;
+    padding-bottom: 2.5vw;
+}
+
+#left h3{
+    width: 30vw;
+    font-size: 2vw;
+    line-height: 2vw;
+    font-family: gotham-bold;
+    color: rgb(251, 251, 251);
+}
+
+#center h1{
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+    font-family: gotham-bold;
+    color: rgb(255, 255, 255);
+}
+
+#page1 video{
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 4vw;
+    position: relative;
+}
+
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 72vh;
+}
+
+#hero-1 {
+    background-color: #38ffafc5;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2 {
+    background: linear-gradient(#65dbac, #65dbac);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero-3 {
+    background: linear-gradient(#65dbac, #65dbac);
+    height: 30vw;
+    position: absolute;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(29px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    padding: 8vw 0;
+    position: relative;
+}
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+    font-size: 9vw;
+    /* background-color: lightblue; */
+    display: inline-block;
+    font-family: gotham-bold;
+    color: white;
+}
+
+#gola {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #38ffb1;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom {
+    height: 80vh;
+    width: 100%;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+
+#page2-bottom h1 {
+    font-size: 3.7vw;
+    width: 60%;
+    line-height: 4vw;
+    color: white;
+    font-family: gotham-bold;
+}
+
+#bottom-part2 {
+    width: 20%;
+    /* background-color: aqua; */
+}
+
+#bottom-part2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p {
+    font-weight: 200;
+    margin-top: 2vw;
+    font-size: 1vw;
+    color: white;
+    font-family: gotham-thin;
+}
+
+#page2 #gooey {
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #65dbac, #65dbac);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes gooey {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 4vw 0;
+    background-color: #000000;
+}
+
+
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+
+    border-bottom: 1px solid #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.elem h2 {
+    color: #ffffff;
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+    font-family: gotham-bold;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #38ffb1;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+.elem:hover h2{
+    color: #000000;
+}
+
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#page-center{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width */
+    height: 100vh;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Ensure no margin is added */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden; /* Ensure overflow is hidden */
+
+}
+
+
+.text-section {
+    width: 45%;
+    color: #fff;
+   
+}
+
+.text-section h1 {
+    font-size: 5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    font-family: gotham-regular;
+    padding-left: 2vw;
+    
+}
+
+.text-section h1 .clickable {
+    color: #898787;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+    position: relative;
+    font-family: gotham-regular;
+}
+
+
+.text-section h1 .highlight {
+    color: #000000; /* Highlighted Section Effect */
+    transform: translateX(10px) scale(1); /* Move forward on click */
+    z-index: 3; /* Bring the clicked item to the front */
+    font-family: gotham-regular;
+}
+
+.text-section p {
+    font-size: 13px;
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #000000;
+    font-family: gotham-thin;
+    padding-left: 2vw;
+}
+
+.image-section {
+    width: 50%;
+    justify-content:end;
+    align-items: end;
+    border-radius: 20px;
+    margin-left: 0;
+
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+}
+
+/* Fade-out effect for image */
+.image-section img.fade-out {
+    opacity: 0;
+}
+
+/* Fade-in effect for image */
+.image-section img.fade-in {
+    opacity: 1;
+}
+
+/* Non-highlighted text will move back */
+.text-section h1 .not-highlight {
+    transform: translateX(0) scale(0.9); /* Move backward */
+    z-index: 1; /* Send non-highlighted to the back */
+}
+
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    padding-top: 10vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 20vw;
+}
+
+#page4 h3{
+    color: white;
+    font-size: 28px;
+    font-family: gotham-bold;
+    margin-left: 70px;
+    margin-bottom: 65px;
+}
+.swiper-wrapper{
+    width: 100%;
+    height: 100%;
+    
+  }
+
+.swiper-slide{
+    border-left: 1px solid #ffffff;
+   
+  
+}
+
+  .swiper-slide p{
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-left: 2vw;
+    font-family: gotham-thin;
+    
+  }
+
+  .logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nike-logo {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+}
+
+  .swiper-slide {
+    width: 30%;
+  }
+
+
+#page5 {
+    height: 100vh;
+    width: 100%;
+    
+}
+
+#footer {
+    position: fixed;
+    height: 103.5vh;
+    width: 100%;
+    background-color: #38ffb1;
+    color: #000000;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+
+#footer-div {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    
+}
+
+#footer-div h2{
+    color: #000000;
+    font-size: 25px;
+    font-family: gotham-bold;
+    line-height: 1.7;
+    align-items: flex-start;
+    
+    
+
+}
+#email{
+    color: #000000;
+    font-size: 25px;
+    align-items: flex-end;
+    font-family: gotham-thin;
+}
+
+#footer-bottom {
+    border-top: 2px solid #000000;
+    height: 10vh;
+    width: 100%;
+}
+
+#footer-bottom p{
+    color: #000000;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 24px;
+    font-family: gotham-thin;
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #efe7e7;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 8vw;
+    font-family: gotham-bold;
+    background: linear-gradient(to right,#00ff99,#000000);
+    -webkit-background-clip: text;
+    color: transparent;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 9vw;
+      
+    }
+}
